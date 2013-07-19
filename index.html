@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>お絵かき検索</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="640" height="480" style="background-color:#ffffff;border:solid 2px;">HTML5に対応したブラウザではありません。</canvas>
+    <form name="form">
+        Color : 
+        <select name="s_color">
+            <option value="#000000" selected="serected">Black</option>
+            <option value="#808080">Gray</option>
+            <option value="#c0c0c0">Silver</option>
+            <option value="#ff0000">Red</option>
+            <option value="#ffd000">Yellow</option>
+            <option value="#00ff00">Lime</option>
+            <option value="#00ffff">Aqua</option>
+            <option value="#0000ff">Blue</option>
+            <option value="#ff00ff">Fuchsia</option>
+            <option value="#800000">Maroon</option>
+            <option value="#808000">Olive</option>
+            <option value="#008000">Green</option>
+            <option value="#008080">Teal</option>
+            <option value="#000080">Navy</option>
+            <option value="#800080">Purple</option>
+            <option value="#ffffff">消しゴム</option>
+        </select>   
+        Size : 
+        <select name="s_size">
+            <option value="1">1px</option>
+            <option value="2">2px</option>
+            <option value="4" selected="serected">4px</option>
+            <option value="8">8px</option>
+            <option value="16">16px</option>
+            <option value="32">32px</option>
+            <option value="64">64px</option>
+            <option value="128">128px</option>
+        </select>
+        
+        <input type="button" value="リセット" onclick="reset_canvas()">
+        
+    </form>
+    
+    <br>
+    
+    <form id="form" method="POST" enctype="multipart/form-data" target="_blank" action="http://www.google.com/searchbyimage/upload">
+        <input id="contentinput" type="hidden" name="image_content">
+        <input id="searchbutton" type="button" value="検索">
+    </form>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
